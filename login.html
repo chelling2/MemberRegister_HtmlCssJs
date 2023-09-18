@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>회원가입 페이지</title>
+
+    <link rel="stylesheet" href="flower.css">
+
+<script src="check.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  </head>
+
+  <body>
+    <form autocomplete="off" style="margin-top: 80px;">
+      <table border="1" align="center" width=700 height=400>
+        <tr>
+          <th colspan="2" align="center" bgcolor="#e6e6fa">회원 기본 정보</th>
+        </tr>
+        <tr>
+        <th>아이디:</th>
+        <td><input type="text" name="uid" size="12" minlength="4" maxlength="12" id="id"> 4~12자의 영문 대소문자와 숫자로만 입력</td>
+        </tr>
+
+        <tr>
+        <th>비밀번호:</th>
+        <td><input type="password" name="password" size="25" minlength="4" maxlength="12" id="pwd"> 4~12자의 영문자+숫자+특수문자 입력</td>
+        </tr>
+
+        <tr>
+        <th>비밀번호확인:</th>
+        <td><input type="password" name="passwords" size="25" minlength="4" maxlength="12" id="pwds"></td>
+        </tr>
+
+        <tr>
+        <th>메일주소:</th>
+        <td><input type="email" name="emails" id="email_id"> 예)id@domain.com</td>
+        </tr>
+
+        <tr>
+        <th>이름:</th>
+        <td><input type="text" name="name" id="userName"></td>
+        </tr>
+
+        <tr>
+        <th>주소:</th>
+        <td>
+          <input type="text" name="address1" placeholder="우편번호" required>
+          <button type="button" onclick="searchAddress()">우편번호 찾기</button> <br>
+          <input type="text" name="address2" placeholder="주소" required><br>
+          <input type="text" name="address3" placeholder="상세주소" required><br>
+        </td>
+        </tr>
+
+        <tr>
+          <th colspan="2" align="center" bgcolor="#e6e6fa">개인 신상 정보</th>
+        </tr>
+        <tr>
+        <th>주민등록번호:</th>
+        <td><input type="password" name="specificNum" maxlength="14" id="useInfo" required> 예)123456-1234567
+            <button type="button" onclick="numCheck()">확인</button> <br>
+        </td>
+        </tr>
+
+        <tr>
+        <th>생일:</th>
+        <td>
+          <input type="text" id="birth" size="3" name="year">
+          <select name="month">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+
+          </select>
+          월
+
+
+          <select name="day">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          일
+        </td>
+        </tr>
+
+        <tr>
+        <th>관심분야</th>
+        <td>
+          <input type="checkbox" value="컴퓨터" name="con">컴퓨터
+          <input type="checkbox" value="인터넷" name="con">인터넷
+          <input type="checkbox" value="여행" name="con">여행
+          <input type="checkbox" value="영화감상" name="con">영화감상
+          <input type="checkbox" value="음악감상" name="con">음악감상
+        </td>
+        </tr>
+
+        <tr>
+        <th>자기소개:</th>
+        <td>
+          <textarea name="self" rows="10" cols="60"></textarea>
+        </td>
+        </tr>
+
+      </table>
+    <br>
+    <div align="center">
+      <input type="submit" value="회원 가입" onclick="checkProfile()">
+      <input type="reset" value="다시 입력">
+    </div>
+
+      </form>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="start.js"></script>
+      
+  </body>
+</html>
